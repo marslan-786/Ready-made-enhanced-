@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+requests
+Pillow
+numpy
+gfpgan
+realesrgan
+opencv-python-headless
+torch --index-url https://download.pytorch.org/whl/cpu
