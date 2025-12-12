@@ -1,0 +1,16 @@
+[phases.setup]
+nixPkgs = [
+    "python310",
+    "ffmpeg",
+    "libglvnd",
+    "glib",
+    "xorg.libSM",
+    "xorg.libXext",
+    "xorg.libXrender"
+]
+
+[phases.install]
+cmds = ["python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt"]
+
+[start]
+cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT --timeout-keep-alive 300"
